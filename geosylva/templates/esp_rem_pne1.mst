@@ -1,0 +1,152 @@
+{{#features}}
+	<li class="item" style="width:238px;">
+		<h3 class="title-feature ">{{nom_complet}}</h3>
+		<div id="url_photo"></div>
+		<p class="img-credit"><i>Parc national des Ecrins</i></p>
+		<div id="url_site"></div>
+</br>
+		<div id="desc"></div>
+
+		
+		
+	</li>
+{{/features}}
+
+<style>
+
+	:root {
+		--mycolor: #1D1B35;
+	}
+
+	/***********************************************/
+	/*** Ne pas toucher aux propriétés suivantes ***/
+
+	/* Texte */
+
+	.title-feature {
+		color: var(--mycolor);
+	    font-family: 'roboto_bold_c', Arial, Sans-serif;
+	    text-transform: uppercase;
+	    font-size: 19px;
+	    margin-bottom: 7%;
+	    line-height: 1.2;
+	}
+	.subtitle-feature {
+		color: var(--mycolor);
+		font-family:'roboto_regular', Arial, Sans-serif;
+		font-size:18px;
+		margin-top:7%;
+		line-height:1;
+	}
+
+	.text-feature{
+		font-family:'roboto_regular', Arial, Sans-serif;
+		color:#555;
+		font-size:12px;
+		margin-top:5%;
+	}
+
+	/* Image */
+	
+	.img{
+		margin-top:5%;
+	}
+
+	.img-credit{
+		font-family:'roboto_regular', Arial, Sans-serif;
+		color:#555;
+		font-size:10px;
+		margin: 2px 0px;
+	}
+
+	/* Bouton en savoir plus */
+
+	.position-button{
+		text-align: center;
+		padding: 15px;
+	}
+
+	a.button-link {
+		border-radius: 4px;
+		color: #FFFFFF;
+		font-family: 'roboto_regular', Arial, Sans-serif;
+		font-size: 12px;
+		padding: 8px;
+		background-color: var(--mycolor);
+		border: solid var(--mycolor) 1px;
+		text-decoration: none;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	a.button-link:hover {
+		background: var(--mycolor);
+		border: solid var(--mycolor) 1px;
+		border-radius: 4px;
+		text-decoration: none;
+	}
+	
+</style>
+
+
+
+
+<script language="javascript"> 
+
+
+  var c_geo = [];
+        {{#features}}
+            c_geo.push('{{nom_complet}}');
+        {{/features}}
+
+{{#features}}
+
+      getData();
+  
+        async function getData() {
+            const response = await fetch(
+'http://localhost:8080/geoserver/GeoSylva/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Aesp_rem_bib&maxFeatures=1000&outputFormat=application/json');
+            console.log(response);
+            const data = await response.json();
+            console.log(data);
+            length = data.features.length;
+            console.log(length);
+  
+
+
+            cd_ref = [];
+            nom_vernac = [];
+            url_photo = [];
+            desc = [];           
+            url_site = [];
+
+            function filterByNC(nom_complet) {
+                const dataByNC = [];
+                data.features.forEach((element)=> {
+                if(element.properties.nom_complet == nom_complet) {
+                    dataByNC.push(element.properties.nom_vernac);
+                    url_photo.push(element.properties.url_photo);
+                    desc.push(element.properties.desc);
+                    url_site.push(element.properties.url_site)
+                }
+            })
+                return dataByNC;
+            }
+            values = filterByNC("{{nom_complet}}");
+
+console.log(values)
+console.log(url_photo)
+console.log(desc)
+document.getElementById('url_photo').innerHTML = url_photo;
+document.getElementById('desc').innerHTML = desc;
+
+document.getElementById('url_photo').innerHTML = '<img src="'+url_photo+'" class="img img-responsive"/>'
+document.getElementById('url_site').innerHTML = '<a href="'+url_site+'" target="_blank" class="button-link">Fiche taxonomique sur GeoNature</a>"'
+
+		
+;
+
+        }
+
+{{/features}}
+</script>        
