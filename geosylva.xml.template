@@ -120,7 +120,7 @@
                 attribution="Parc national des Ecrins"
                 metadata=""
                 metadata-csw="" >
-                <template url="apps/geosylva/templates/secteurs_pne.mst"/>
+                <template url="apps/geosylva/templates/secteurs.mst"/>
                 </layer>
                 
 
@@ -138,7 +138,7 @@
                 attribution="Parc national des Ecrins"
                 metadata=""
                 metadata-csw="" >
-               <template url="apps/geosylva/templates/com_pne.mst"/>
+               <template url="apps/geosylva/templates/com.mst"/>
                 </layer>
 
         </theme>
@@ -205,7 +205,7 @@
                 attribution="Parc national des Ecrins"
                 metadata=""
                 metadata-csw="" >
-                               <template url="apps/geosylva/templates/esp_rem_pne1.mst"/>
+                               <template url="apps/geosylva/templates/esp_rem.mst"/>
 
                 </layer>
 
