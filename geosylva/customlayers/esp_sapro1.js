@@ -3,9 +3,9 @@ mviewer.customLayers.esp_sapro = {};
 mviewer.customLayers.esp_sapro.layer = new ol.layer.Vector({
         source: new ol.source.Vector({
            //essai en ligne //
-           // url: "https://geonature.ecrins-parcnational.fr/dataexport/esp_saprox.geojson",//
+           url: "https://geonature.ecrins-parcnational.fr/dataexport/esp_saprox.geojson",
            //URL locale : //
-           url :"apps/geosylva/data/esp_saprox.geojson",
+           //url :"apps/geosylva/data/esp_saprox.geojson",
             format: new ol.format.GeoJSON()
         }),
 style_sapro : new ol.style.Style({

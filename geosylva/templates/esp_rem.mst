@@ -105,7 +105,7 @@
   
         async function getData() {
             const response = await fetch(
-'http://localhost:8080/geoserver/GeoSylva/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Aesp_rem_bib&maxFeatures=1000&outputFormat=application/json');
+'http://188.165.118.84/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Aesp_rem_bib&maxFeatures=1000&outputFormat=application/json');
             console.log(response);
             const data = await response.json();
             console.log(data);

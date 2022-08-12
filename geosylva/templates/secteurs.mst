@@ -1,18 +1,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"> </script>
 
 {{#features}}
-  <li id="{{id}}" class="item" style="width:238px;">
-    <h5 class="title-feature"> {{nom}}</h5>
+  <li id="{{id_sect}}" class="item" style="width:238px;">
+    <h5 class="title-feature"> {{nom_sect}}</h5>
 
-          <!--Chiffres clés-->
-
-
+     
 
 		<!-- Chart 1-->
 	    <div class="Chart">
                 <div class="textChart">
               <div class="title-chart">Types de peuplements</div>
-               <div class="subtitle-chart"><i>sur la commune</i></div>
+               <div class="subtitle-chart"><i>sur le secteur</i></div>
           </div> 
 	        <div id="idChart">
 	            <canvas id="doughnut-chart" width="120" height="90"></canvas>
@@ -28,7 +26,7 @@
       <div class="Chart">
                 <div class="textChart">
               <div class="title-chart">Types de recouvrement</div>
-               <div class="subtitle-chart"><i>sur la commune</i></div>
+               <div class="subtitle-chart"><i>sur le secteur</i></div>
           </div> 
 
           <div id="idChart2">
@@ -40,6 +38,47 @@
       <!-- ./Chart 2-->   
 
 
+
+      <br> </br>
+
+
+    <img src={{url_sect_img}} class="fit-picture" style="margin-top:5%;" alt="Image" height="250" width="250" />
+
+     <a href="{{url_sect}}" target="_blank" title="Lien site internet" class="but-link">
+              <span class="fa fa-globe" aria-hidden="true"></span> <b>Découvrir le secteur</b>
+         </a>
+
+</br>
+              <!--Chiffres clés-->
+
+        <div class="row numberkey" style="height: auto;">
+          <div class="zone-iconnumber col-sm-4">
+              <div id="iconnumber"></div>
+            </div>
+          <div class="col-sm-8 numText">
+            <div class="number-feature">{{pert_for20_sect}} ha</div>
+            <div class="titlenumber-feature">Perte forestière</div>
+            <div class="subtitlenumber-feature"><i>estimée entre 2000 et 2020</i></div>
+          </div>
+        </div>
+        <!--./Chiffres clés-->
+
+            <div class="position-button">
+      <a href="https://earthenginepartners.appspot.com/science-2013-global-forest" target="_blank" class="button-link">En savoir plus</a>
+    </div>
+
+
+
+
+
+      		
+
+          <!-- TEXTE
+    <p class="text-feature">    
+      <span style="font-family:'roboto_bold'"> Surface totale :</span> {{surface_ha_sect}} ha<br/>
+      <span style="font-family:'roboto_bold'"> Perte forestière (2000-2020) :</span> {{pert_for20_sect}}ha<br/>
+    </p>
+    -->
 
 
 	</li>
@@ -182,7 +221,7 @@
   /// Récupération du code_geo de l'entité selectionnée 
   var c_geo = [];
         {{#features}}
-            c_geo.push('{{nom}}');
+            c_geo.push('{{nom_sect}}');
         {{/features}}
 
 {{#features}}
@@ -191,7 +230,7 @@
   
         async function getData() {
             const response = await fetch(
-'http://localhost:8080/geoserver/GeoSylva/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Av_stats_ppmt_com&maxFeatures=1000&outputFormat=application/json');
+'http://188.165.118.84/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Av_stats_ppmt&maxFeatures=1000&outputFormat=application/json');
             console.log(response);
             const data = await response.json();
             console.log(data);
@@ -201,21 +240,21 @@
 
 
             ppmt = [];
-            com = [];
+            sect = [];
             values = [];
             
 
-            function filterByCommunes(com) {
-                const dataByCom = [];
+            function filterBySecteur(secteur) {
+                const dataBySect = [];
                 data.features.forEach((element)=> {
-                if(element.properties.nom == com) {
-                    dataByCom.push(element.properties.aire_ha);
+                if(element.properties.nom_sect == secteur) {
+                    dataBySect.push(element.properties.aire_ha);
                     ppmt.push(element.properties.classif_peuplement)
                 }
             })
-                return dataByCom;
+                return dataBySect;
             }
-            values = filterByCommunes("{{nom}}");
+            values = filterBySecteur("{{nom_sect}}");
 
 console.log(values)
   
@@ -253,6 +292,7 @@ console.log(values)
 </script>        
 
 
+
 <script language="javascript"> 
 
   ////// PARAMETRAGE DU GRAPHIQUE - JS///////
@@ -260,7 +300,7 @@ console.log(values)
   /// Récupération du code_geo de l'entité selectionnée 
   var c_geo = [];
         {{#features}}
-            c_geo.push('{{nom}}');
+            c_geo.push('{{nom_sect}}');
         {{/features}}
 
 {{#features}}
@@ -269,7 +309,7 @@ console.log(values)
   
         async function getData() {
             const response = await fetch(
-'http://localhost:8080/geoserver/GeoSylva/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Av_stats_recouv_com&maxFeatures=1000&outputFormat=application/json');
+'http://188.165.118.84/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Av_stats_recouv&maxFeatures=1000&outputFormat=application/json');
             console.log(response);
             const data = await response.json();
             console.log(data);
@@ -283,17 +323,17 @@ console.log(values)
             values = [];
             
 
-            function filterByCommunes(com) {
-                const dataByCom = [];
+            function filterBySecteur(secteur) {
+                const dataBySect = [];
                 data.features.forEach((element)=> {
-                if(element.properties.nom == com) {
-                    dataByCom.push(element.properties.aire_ha);
+                if(element.properties.nom_sect == secteur) {
+                    dataBySect.push(element.properties.aire_ha);
                     recouv.push(element.properties.reclass_recouv)
                 }
             })
-                return dataByCom;
+                return dataBySect;
             }
-            values = filterByCommunes("{{nom}}");
+            values = filterBySecteur("{{nom_sect}}");
 
 console.log(values)
   

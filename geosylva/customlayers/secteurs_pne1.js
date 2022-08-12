@@ -1,12 +1,12 @@
 
 {
-mviewer.customLayers.com_pne = {};
-var com_pne = mviewer.customLayers.com_pne;
+mviewer.customLayers.secteurs_pne = {};
+var secteurs_pne = mviewer.customLayers.secteurs_pne;
 
 // Génération de la liste des légendes
-com_pne.legend = {items: [{
+secteurs_pne.legend = {items: [{
         geometry: "Polygon",
-        label: "com_pne",
+        label: "secteurs_pne",
         styles: [new ol.style.Style({
           stroke: new ol.style.Stroke({
             color: 'RGBA(0,70,112,1)',
@@ -21,15 +21,15 @@ com_pne.legend = {items: [{
 };
 
 // Appel de la source de donnée (attention à la projection) et affichage du style sur la carte
-mviewer.customLayers.com_pne.layer = new ol.layer.Vector({
+mviewer.customLayers.secteurs_pne.layer = new ol.layer.Vector({
         source: new ol.source.Vector({
-            url: "http://localhost:8080/geoserver/GeoSylva/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Acom_pne&maxFeatures=500&outputFormat=application/json&srsName=EPSG:3857",
+            url: "http://188.165.118.84/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Asecteurs_pne&maxFeatures=50&outputFormat=application/json&srsName=EPSG:3857",
             format: new ol.format.GeoJSON()
         }),
         style: function(feature, resolution) {
-            return com_pne.legend.items[0].styles;
+            return secteurs_pne.legend.items[0].styles;
         }
 });
-mviewer.customLayers.com_pne.handle = falé;
+mviewer.customLayers.secteurs_pne.handle = false;
 }
 
