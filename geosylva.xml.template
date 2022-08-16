@@ -4,13 +4,17 @@
     <mapoptions maxzoom="19" projection="EPSG:3857" center="780565,5599999" zoom="9" projextent="5650895.5375, 5539855.7412, 600043.3439, 783030.8439" />
 
 
-
-
 <!-- FONDS DE CARTE -->
 
     <baselayers style="gallery">
 
+gi
+    <!-- OSM -->
 
+        <baselayer  type="OSM" id="osm1" label="OpenStreetMap" title="OpenStreetMap" thumbgallery="apps/geosylva/img/basemap/osm.png" 
+            url="http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
+            attribution="© MapQuest. Données : les contributeurs d'OpenStreetMap" visible="true"/>
+    
     <!-- SCAN 25 -->
 
         <baselayer type="WMS" id="scan25" 
@@ -18,14 +22,6 @@
             url="https://wxs.ign.fr/9di07xevjtkpoxuujjxo0ngz/geoportail/r/wms?" 
             format="image/jpeg" layers="SCAN25TOUR_PYR-JPEG_WLD_WM"
             visible="false" attribution="IGN"/>
-
-
-    <!-- OSM -->
-
-        <baselayer  type="OSM" id="osm1" label="OpenStreetMap" title="OpenStreetMap" thumbgallery="apps/geosylva/img/basemap/osm.png" 
-            url="http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
-            attribution="© MapQuest. Données : les contributeurs d'OpenStreetMap" visible="true"/>
-    
 
     <!-- Ortho 20 cm -->
 
