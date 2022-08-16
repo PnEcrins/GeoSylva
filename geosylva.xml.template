@@ -9,11 +9,19 @@
 
     <baselayers style="gallery">
 
+       <!-- Ortho 20 cm -->
+
+        <baselayer type="WMTS" id="ortho2" 
+            label="Photo aérienne IGN" title="Photo aérienne IGN" 
+            maxscale="1000" thumbgallery="img/basemap/ortho.jpg" url="https://wxs.ign.fr/essentiels/geoportail/wmts" layers="ORTHOIMAGERY.ORTHOPHOTOS" 
+            format="image/jpeg" visible="true"  
+            attribution="IGN"/>
+   
     <!-- OSM -->
 
         <baselayer  type="OSM" id="osm1" label="OpenStreetMap" title="OpenStreetMap" thumbgallery="apps/geosylva/img/basemap/osm.png" 
             url="http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
-            attribution="© MapQuest. Données : les contributeurs d'OpenStreetMap" visible="true"/>
+            attribution="© MapQuest. Données : les contributeurs d'OpenStreetMap" visible="false"/>
     
     <!-- SCAN 25 -->
 
@@ -23,13 +31,7 @@
             format="image/jpeg" layers="SCAN25TOUR_PYR-JPEG_WLD_WM"
             visible="false" attribution="IGN"/>
 
-    <!-- Ortho 20 cm -->
 
-<baselayer type="WMTS" id="ortho2" 
-label="Photo aérienne IGN" title="Photo aérienne IGN" 
-maxscale="1000" thumbgallery="img/basemap/ortho.jpg" url="https://wxs.ign.fr/essentiels/geoportail/wmts" layers="ORTHOIMAGERY.ORTHOPHOTOS" 
-format="image/jpeg" visible="false"  
-attribution="IGN"/>
 
 
     <!-- Etat Major -->
