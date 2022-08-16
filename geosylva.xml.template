@@ -4,11 +4,11 @@
     <mapoptions maxzoom="19" projection="EPSG:3857" center="780565,5599999" zoom="9" projextent="5650895.5375, 5539855.7412, 600043.3439, 783030.8439" />
 
 
+
 <!-- FONDS DE CARTE -->
 
     <baselayers style="gallery">
 
-gi
     <!-- OSM -->
 
         <baselayer  type="OSM" id="osm1" label="OpenStreetMap" title="OpenStreetMap" thumbgallery="apps/geosylva/img/basemap/osm.png" 
@@ -25,11 +25,11 @@ gi
 
     <!-- Ortho 20 cm -->
 
-        <baselayer type="WMS" id="ortho20cm" 
-            label="Ortho 20cm (IGN)" title="Ortho 20cm (IGN)" thumbgallery="img/basemap/esriworldwide.jpg"
-            url="https://wxs.ign.fr/ortho/geoportail/r/wms?" 
-            format="apps/geosylva/image/jpeg" layers="HR.ORTHOIMAGERY.ORTHOPHOTOS"
-            visible="false" attribution="IGN"/>
+<baselayer type="WMTS" id="ortho2" 
+label="Photo aérienne IGN" title="Photo aérienne IGN" 
+maxscale="1000" thumbgallery="img/basemap/ortho.jpg" url="https://wxs.ign.fr/essentiels/geoportail/wmts" layers="ORTHOIMAGERY.ORTHOPHOTOS" 
+format="image/jpeg" visible="false"  
+attribution="IGN"/>
 
 
     <!-- Etat Major -->
