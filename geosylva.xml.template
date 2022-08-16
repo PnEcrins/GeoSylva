@@ -87,7 +87,7 @@
                     name="Coeur du parc"  
                     visible="true" 
                     queryable="false"
-                url="{{url_geoserver}}">
+                url="{{URL_GEOSERVER}}">
                 </layer> 
 
 
@@ -95,7 +95,7 @@
                 name="Hors parc"  
                 visible="true" 
                 queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
                 </layer>
 
         </theme>
@@ -149,15 +149,15 @@
         <theme name="Habitats"  collapsed="true" id="habitats" icon="fas fa-tree"> 
             
             <layer id="ALPAGESFFFO" name="Pastoralisme en forêt"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
              </layer>
 
             <layer id="foretfoff" name="Forêts sur le parc"  visible="true" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
 
             <layer id="bd_foret_v2" name="BD Forêt V2 (IGN)"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
 
 
@@ -166,14 +166,14 @@
     <!-- 3. NATURALITE -->
          <theme name="Naturalité forestière"  collapsed="true" id="nat" icon="fas fa-leaf"> 
             <layer id="zones_humides_PNE" name="Zones humides"  visible="true" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
             <layer id="foret_anc_etat_maj" name="Forêts anciennes"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
 
             <layer id="hsn_ame_onf" name="Forêts publiques en libre évolution"  visible="true" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
 
 
@@ -183,11 +183,11 @@
 
             <!--
              <layer id="arbres_senescents" name="Arbres senescents"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
         -->
              <layer id="esp_for_geonature_poly" name="Densité d'espèces forestières"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
 
 
@@ -234,15 +234,15 @@
     <theme name="Sylviculture"  collapsed="true" id="sylv" icon="fas fa-snowplow"> 
 
              <layer id="forets_publiques_parcelles" name="Parcelles de forêts publiques"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>    
 
              <layer id="forets_privees" name="Estimation de la forêt privée"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>        
 
             <layer id="perte_forest_hansen" name="Pertes forestières"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
 
 
@@ -293,15 +293,15 @@
 
 
             <layer id="boca_ign_pne" name="Bornes forestières"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
 
             <layer id="arb_rem" name="Arbres remarquables"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
 
               <layer id="pdipr" name="Sentiers de randonnée (PDIPR)"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>          
 
     </theme>
@@ -315,13 +315,13 @@
         <group name="Espaces protégés" id="esproteges" >
 
             <layer id="pne_coeur" name="Coeur du parc national"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
             <layer id="ripn" name="Réserve intégrale"  visible="false" queryable="false"
-            url="{{url_geoserver}}">
+            url="{{URL_GEOSERVER}}">
             </layer>
             <layer id="rnn" name="Réserves naturelles nationales"  visible="false" queryable="false"
-                        url="{{url_geoserver}}">
+                        url="{{URL_GEOSERVER}}">
             </layer>
         </group>
 
@@ -330,13 +330,13 @@
         <group name="Autres espaces dits naturels" id="espditsnat" >
 
             <layer id="znieff1" name="ZNIEFF de type 1"  visible="false" queryable="false"
-         url="{{url_geoserver}}">
+         url="{{URL_GEOSERVER}}">
             </layer>           
             <layer id="znieff2" name="ZNIEFF de type 2"  visible="false" queryable="false"
-         url="{{url_geoserver}}">
+         url="{{URL_GEOSERVER}}">
             </layer>  
             <layer id="sicn2000" name="Réseau Natura 2000"  visible="false" queryable="false"
-         url="{{url_geoserver}}">
+         url="{{URL_GEOSERVER}}">
             </layer>              
          
         </group>
