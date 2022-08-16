@@ -9,5 +9,5 @@ TEMPLATE_FILE = "geosylva.xml.template"
 template = templateEnv.get_template(TEMPLATE_FILE)
 outputText = template.render(URL_GEOSERVER=os.environ["URL_GEOSERVER"])
 
-with open("geosylvax.xml", "w") as f:
+with open("/var/www/html/mviewer/apps/geosylvax.xml", "w") as f:
     f.write(outputText)
