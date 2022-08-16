@@ -17,14 +17,14 @@
             label="Scan25 (IGN)" title="Scan25 (IGN)" thumbgallery="apps/geosylva/img/basemap/scan25.png"
             url="https://wxs.ign.fr/9di07xevjtkpoxuujjxo0ngz/geoportail/r/wms?" 
             format="image/jpeg" layers="SCAN25TOUR_PYR-JPEG_WLD_WM"
-            visible="true" attribution="IGN"/>
+            visible="false" attribution="IGN"/>
 
 
     <!-- OSM -->
 
         <baselayer  type="OSM" id="osm1" label="OpenStreetMap" title="OpenStreetMap" thumbgallery="apps/geosylva/img/basemap/osm.png" 
             url="http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
-            attribution="© MapQuest. Données : les contributeurs d'OpenStreetMap" visible="false"/>
+            attribution="© MapQuest. Données : les contributeurs d'OpenStreetMap" visible="true"/>
     
 
     <!-- Ortho 20 cm -->
