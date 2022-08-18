@@ -13,4 +13,4 @@ Copier ces fichiers dans le répertoire PWET PWET.
 
 Définir une variable d'environnement URL_GEOSERVER dans le fichier TUTU
 
-export URL_GEOSERVER=http://mon_url.io
+export URL_GEOSERVER=http://mon_url.iogit 
