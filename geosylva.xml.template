@@ -327,7 +327,7 @@
 
         <group name="Autres espaces naturels" id="espditsnat" >
 
-            </layer>  
+   
             <layer id="sicn2000" name="Réseau Natura 2000"  visible="false" queryable="false"
          url="{{URL_GEOSERVER}}">
             </layer>              
