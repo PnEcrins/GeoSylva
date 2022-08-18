@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <application title="GeoSylva" mouseposition="false" logo="apps/geosylva/img/logo/logo_pne.png" showhelp="true" help="apps/geosylva/doc_geosylva.html" measuretools="true" exportpng="true" style="apps/geosylva/css/themes/nephritis.css" togglealllayersfromtheme="true"/>
+    <application title="GeoSylva : Patrimoines forestiers du parc national des Écrins" mouseposition="false" logo="apps/geosylva/img/logo/logo_pne.png" showhelp="true" help="apps/geosylva/doc_geosylva.html" measuretools="true" exportpng="true" style="apps/geosylva/css/themes/nephritis.css" togglealllayersfromtheme="true"/>
     <mapoptions maxzoom="19" projection="EPSG:3857" center="780565,5599999" zoom="9" projextent="5650895.5375, 5539855.7412, 600043.3439, 783030.8439" />
 
 
@@ -78,11 +78,11 @@
     <!-- 1a. LIMITES -->
 
 
-    <theme name="Limites du parc" collapsed="true" id="lim" icon="fas fa-bars">
+    <theme name="Parc national" collapsed="true" id="lim" icon="fas fa-bars">
 
 
                 <layer id="pne_coeur" 
-                    name="Coeur du parc"  
+                    name="Coeur du parc national"  
                     visible="true" 
                     queryable="false"
                 url="{{URL_GEOSERVER}}">
@@ -90,7 +90,7 @@
 
 
             <layer id="buffermask" 
-                name="Hors parc"  
+                name="Hors parc national"  
                 visible="true" 
                 queryable="false"
             url="{{URL_GEOSERVER}}">
@@ -106,7 +106,7 @@
 
                 <layer id="secteurs_pne" 
                 name="Secteurs du parc"  
-                visible="true" 
+                visible="false" 
                 type= 'customlayer'
                 expanded = 'true'
                 queryable="true" fields ="nom_sect, pert_for20_sect" 
@@ -146,15 +146,15 @@
     <!-- 2. HABITATS -->
         <theme name="Habitats"  collapsed="true" id="habitats" icon="fas fa-tree"> 
             
-            <layer id="ALPAGESFFFO" name="Pastoralisme en forêt"  visible="false" queryable="false"
+            <layer id="ALPAGESFFFO" name="Unités pastorales en forêt"  visible="false" queryable="false"
             url="{{URL_GEOSERVER}}">
              </layer>
 
-            <layer id="foretfoff" name="Forêts sur le parc"  visible="true" queryable="false"
+            <layer id="foretfoff" name="BD Forêt (IGN) : Taux d’ouverture (seuil 40%)"  visible="true" queryable="false"
             url="{{URL_GEOSERVER}}">
             </layer>
 
-            <layer id="bd_foret_v2" name="BD Forêt V2 (IGN)"  visible="false" queryable="false"
+            <layer id="bd_foret_v2" name="BD Forêt (IGN) : Habitats"  visible="false" queryable="false"
             url="{{URL_GEOSERVER}}">
             </layer>
 
