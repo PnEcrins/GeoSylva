@@ -225,7 +225,7 @@
 
 
     <!-- 4. SYLVICULTURE -->
-    <theme name="Sylviculture"  collapsed="true" id="sylv" icon="fas fa-snowplow"> 
+    <theme name="Sylviculture"  collapsed="true" id="sylv" icon="fas fa-greater-than"> 
 
              <layer id="forets_publiques_parcelles" name="Parcelles de forêts publiques"  visible="false" queryable="false"
             url="{{URL_GEOSERVER}}">
