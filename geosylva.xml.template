@@ -306,11 +306,11 @@
 
     <!-- 6. ZONAGES -->
 
-    <theme name="Zonages environnementaux"  collapsed="true" id="zonevt" icon="fas fa-map">
+    <theme name="Espaces naturels"  collapsed="true" id="zonevt" icon="fas fa-map">
 
          <!-- 6.1. ESPACES PROTEGES -->
 
-        <group name="Espaces protégés" id="esproteges" >
+        <group name="Espaces naturels protégés" id="esproteges" >
 
             <layer id="pne_coeur" name="Coeur du parc national"  visible="false" queryable="false"
             url="{{URL_GEOSERVER}}">
@@ -325,13 +325,8 @@
 
          <!-- 6.2. AUTRES ESPACES DITS NATURELS -->
 
-        <group name="Autres espaces dits naturels" id="espditsnat" >
+        <group name="Autres espaces naturels" id="espditsnat" >
 
-            <layer id="znieff1" name="ZNIEFF de type 1"  visible="false" queryable="false"
-         url="{{URL_GEOSERVER}}">
-            </layer>           
-            <layer id="znieff2" name="ZNIEFF de type 2"  visible="false" queryable="false"
-         url="{{URL_GEOSERVER}}">
             </layer>  
             <layer id="sicn2000" name="Réseau Natura 2000"  visible="false" queryable="false"
          url="{{URL_GEOSERVER}}">
