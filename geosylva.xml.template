@@ -170,13 +170,9 @@
             url="{{URL_GEOSERVER}}">
             </layer>
 
-            <layer id="hsn_ame_onf" name="Forêts publiques en libre évolution"  visible="true" queryable="false"
+            <layer id="hsn_ame_onf" name="Forêts publiques en libre évolution"  visible="false" queryable="false"
             url="{{URL_GEOSERVER}}">
             </layer>
-
-
-
-
 
 
             <!--
@@ -191,7 +187,7 @@
 
              <layer id="esp_rem" 
                 name="Espèces remarquables"  
-                visible="true" 
+                visible="false" 
                 type= 'customlayer'
                 expanded = 'false'
                 queryable="true" fields ="nom_complet" 
