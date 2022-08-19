@@ -269,7 +269,7 @@ console.log(values)
   
         async function getData() {
             const response = await fetch(
-'http://188.165.118.84/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Av_stats_recouv_com&maxFeatures=1000&outputFormat=application/json');
+'https://geoserver.ecrins.net/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Av_stats_recouv_com&maxFeatures=1000&outputFormat=application/json');
             console.log(response);
             const data = await response.json();
             console.log(data);
