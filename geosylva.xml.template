@@ -90,7 +90,7 @@
 
 
             <layer id="buffermask" 
-                name="Hors parc national"  
+                name="Aire d'adhésion"  
                 visible="true" 
                 queryable="false"
             url="{{URL_GEOSERVER}}">
