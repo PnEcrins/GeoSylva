@@ -23,7 +23,7 @@ secteurs_pne.legend = {items: [{
 // Appel de la source de donnée (attention à la projection) et affichage du style sur la carte
 mviewer.customLayers.secteurs_pne.layer = new ol.layer.Vector({
         source: new ol.source.Vector({
-            url: "http://188.165.118.84/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Asecteurs_pne&maxFeatures=50&outputFormat=application/json&srsName=EPSG:3857",
+            url: "hhttps://geoserver.ecrins.net/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Asecteurs_pne&maxFeatures=50&outputFormat=application/json&srsName=EPSG:3857",
             format: new ol.format.GeoJSON()
         }),
         style: function(feature, resolution) {

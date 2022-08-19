@@ -152,7 +152,7 @@ legend.items.push({styles:styleONFX, type: "Non aménagé", geometry: "Polygon"}
 
 let ame_onf = new ol.layer.Vector({
         source: new ol.source.Vector({
-            url: "http://188.165.118.84/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Aame_onf&maxFeatures=50000&outputFormat=application/json&srsName=EPSG:3857",
+            url: "hhttps://geoserver.ecrins.net/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Aame_onf&maxFeatures=50000&outputFormat=application/json&srsName=EPSG:3857",
             format: new ol.format.GeoJSON()
         }),
         style: function(feature, resolution) {

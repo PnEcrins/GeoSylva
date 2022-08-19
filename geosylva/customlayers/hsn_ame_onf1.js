@@ -20,7 +20,7 @@ legend.items.push({styles:stylehsname, type: "Forêts publiques en libre évolut
 
 let hsn_ame_onf = new ol.layer.Vector({
         source: new ol.source.Vector({
-            url: "http://188.165.118.84/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Ahsn_ame_onf&maxFeatures=50000&outputFormat=application/json&srsName=EPSG:3857",
+            url: "https://geoserver.ecrins.net/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Ahsn_ame_onf&maxFeatures=50000&outputFormat=application/json&srsName=EPSG:3857",
             format: new ol.format.GeoJSON()
         }),
        

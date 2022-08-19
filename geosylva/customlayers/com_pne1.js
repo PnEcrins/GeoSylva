@@ -17,7 +17,7 @@ legend.items.push({styles:styleCom, type: "Communes", geometry: "Polygon"});
 
 let com = new ol.layer.Vector({
         source: new ol.source.Vector({
-            url: "http://188.165.118.84/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Acom&maxFeatures=50000&outputFormat=application/json&srsName=EPSG:3857",
+            url: "https://geoserver.ecrins.net/geoserver/cite/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=GeoSylva%3Acom&maxFeatures=50000&outputFormat=application/json&srsName=EPSG:3857",
             format: new ol.format.GeoJSON()
         }),
        
