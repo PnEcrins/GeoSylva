@@ -106,7 +106,7 @@
 
                 <layer id="secteurs_pne" 
                 name="Secteurs du parc"  
-                visible="false" 
+                visible="true" 
                 type= 'customlayer'
                 expanded = 'true'
                 queryable="true" fields ="nom_sect, pert_for20_sect" 
